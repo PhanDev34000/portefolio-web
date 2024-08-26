@@ -1,0 +1,732 @@
+/* Initialisation */
+*,::before, ::after {
+    margin:0; /* Centre horizontalement */
+    padding: 0;
+    box-sizing: border-box; /* Inclure les bordures et les rembourrages dans la largeur/hauteur */
+  }
+
+
+/*     Paramétrage Titres & Textes     */
+h1, h2, h3, h4, h5 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;    
+}
+
+h1 {
+    margin: 15px auto;
+    font-size: clamp(25px, 2vw, 35px);
+}
+
+h2 {
+    color: white;
+    font-size: clamp(15px, 1.8vw, 25px);
+    padding: 10px;
+   
+}
+
+h3 {
+    font-size: clamp(12px, 1.6vw, 21px); 
+}
+
+h5 {
+    font-size: clamp(8px, 1.3vw, 15px); 
+}
+
+p {
+    width: 75%;
+   
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;   
+    font-size: clamp(10px, 1vw, 18px); 
+}
+
+/*      Parmétrage des couleurs      */
+
+:root {
+    --primarycolor: rgb(18, 81, 29); /* Couleur principale #12511D   rgba(18, 81, 29, 0.8) */
+    --secondarycolor: rgb(142, 189, 66); /* Couleur secondaire #8EBD42 */
+    --tertarycolor: rgb(36, 75, 110);  /* Couleur tertiaire #244B6E */
+}
+
+
+
+/*                                     PAGE ACCUEIL                     */
+
+/*      1ere Photo                                 */
+.photo {      
+    position: relative;
+    width: 100%; 
+    height: 100%;
+    overflow: hidden; /* Pour s'assurer que l'image ne dépasse pas la largeur du conteneur */     
+}
+
+.photo .image img {
+    height: 100%;
+    width: 100%;
+    object-fit:cover; 
+    padding-top: 90px;       
+}
+
+.photo .image-text {
+    position: absolute;
+    bottom: 5%;
+    right: 3%;
+    color: white;
+    font-size: clamp(8px, 1vw, 18px);
+    font-weight:500;
+    background-color: rgba(0, 0, 0, 0.3); /* Ajoute un fond semi-transparent pour améliorer la lisibilité */
+    padding: 5px 10px;
+    width: auto;
+    text-align: center;
+    border-radius: 5px;       
+}
+
+/*   Bandeau Présentation    */
+
+.bandeau-presentation {
+    display: flex;
+    background-color: var(--primarycolor); /* Couleur verte du bandeau */    
+    text-align: center; /* Centrer le contenu horizontalement */
+    color: white; /* Couleur du texte */
+    padding: 1%;
+}
+
+.left-content {           
+    text-align: center; /* Alignement du texte au centre */
+    color: white; /* Couleur du texte */       
+}
+
+.right-content {
+    margin: 2rem; /* Espacement entre le texte et la photo */
+    text-align: center; /* Alignement du texte au centre */
+    color: white; /* Couleur du texte */  
+}
+
+.left-content img {
+    width: clamp(100px, 10vw, 400px);
+    border-radius: 10px; /* Coin arrondi de l'image  */   
+}
+
+.right-content img {
+    width: clamp(100px, 10vw, 400px); /* Définit une largeur minimale de 100px, une largeur maximale de 400px et une largeur optimale de 20vw */
+    height: auto;   
+}
+
+#texte_presentation {padding-bottom: 2%;}
+
+/*  Bandeau Titre     */
+.titre1 {
+    text-align: center; /* Centrer le contenu horizontalement */    
+    width: 100%; /* la div occupe toute la largeur disponible */    
+}
+
+/* Bandeau vidéo */
+.bandeau-video {        
+    text-align: center; /* Centrer le contenu horizontalement */     
+} 
+
+.photo1 {
+    display: flex;
+    position: relative;
+}
+
+.photo1 img {
+    height:auto;
+    width: 100%;
+    object-fit:cover; 
+    opacity: 70%;
+}
+
+
+.video-container {
+    position: absolute; 
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto; /* Centrer horizontalement */
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+}
+
+.video-container::after {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-bottom: calc(480/854*100);
+}
+
+video {
+    position: absolute;
+    width: 100%;
+    height: 100%;    
+}
+
+/*   Bandeau & icones (Ils nous ont fait confiance) */
+
+.icone1 {      
+    padding-bottom: 1rem;
+}
+
+.bandeau-confiance {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;    
+    background-color: var(--secondarycolor); 
+    width: 100%; /* Occupant toute la largeur */
+    padding: 20px 0; /* Espacement interne */
+    text-align: center; /* Centrer les icônes horizontalement */    
+}
+
+.bandeau-confiance img {
+    max-width: 100%; /* Les logos ne dépasseront pas de leur conteneur */
+    height: auto; /* la hauteur s'ajuste automatiquement pour maintenir les proportions */
+    margin: 30px;
+    width: 14%;
+}
+
+
+/*  Exemples d'études   */
+
+.etude {
+    text-align: center; /* Centrer le contenu horizontalement */
+    margin: 0 auto; /* Centrer la div par rapport à son conteneur */
+    width: 100%; /* la div occupe toute la largeur disponible */
+    background-color: var(--primarycolor);
+    padding-top: 10px;
+    padding-bottom: 10px;    
+}
+
+.etude_bandeau {
+    background-color: var(--secondarycolor);
+    width: 80%;
+    height: auto;
+    border-radius: 10px;   
+    padding-top: 1px; 
+    padding-bottom: 30px;
+    margin: 20px auto;        
+}
+
+#etude_titre {
+    color: var (--primarycolor);
+    font-size: 30px;
+    margin: 10px auto;
+}
+
+#etude_titre2 {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#etude_p {
+    margin: 0 auto;
+}
+
+/*  Carte   */
+#carto {
+    width: 45%;
+    height: auto;
+    justify-content: center;
+}
+
+.carte {
+    text-align: center; /* Centrer le contenu horizontalement */
+    margin: 0 auto; /* Centrer la div par rapport à son conteneur */
+    width: 100%; /* la div occupe toute la largeur disponible */    
+ }
+
+.green {    
+    border-bottom: 2px solid #cbeab1;    
+}
+
+.yellow {    
+    border-bottom: 2px solid #fff713;
+}
+
+
+ /*  Boutons    */
+
+ .cta_button {
+    background-color: var(--secondarycolor);;
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-bottom: 30px;    
+    border: 2px solid var(--primarycolor);;
+    padding: 10px 35px;
+    color: white;
+    cursor: pointer;
+ }
+
+ .button {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;    
+    border-bottom: 2px solid black;
+ }
+
+.accueil_bouton {
+    text-align: center;
+    border-top: 2px dotted black;
+    width: 50%;
+    margin: 20px auto;
+}
+
+#titre_bouton {
+    color: black;
+}
+
+
+/*                                PAGE PRESTATIONS                                   */
+
+.container2 {
+    background-color: var(--primarycolor);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container3 {
+    background-color: var(--secondarycolor);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta_button3 {
+    background-color: var(--primarycolor);
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 2px solid var(--secondarycolor);;
+    padding: 10px 35px;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+
+/*                                PAGE PARCOURS                                  */
+
+.bandeau-presentation3 {
+    display: flex;
+    color: white; 
+    width: 100%;
+}
+
+.container4 {
+    background-color: var(--secondarycolor);
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+.container4 .right-content img {
+    margin-left: 40px;
+    border-radius: 10px;
+    max-width: 300px;
+    width: 100%;
+    height: 100%;
+}
+
+.container5 {
+    background-color: var(--primarycolor);
+    margin-top: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.container6 {
+    background-color: var(--primarycolor);
+    margin-top: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container7 {
+    background-color: var(--primarycolor);
+    padding: 10px;
+    text-align: center;
+    color: white;    
+}
+
+.link {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--secondarycolor);
+    border-radius: 15px;
+    margin: 15px auto;
+    padding: 10px;
+    width: 60%;
+}
+
+.cta_button2 {
+    background-color: var(--primarycolor);
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    color: white;
+    border: 2px solid var(--primarycolor);
+    padding: 10px 35px;
+    cursor: pointer;
+ }
+
+ #more {
+    cursor: pointer;
+    color: var(--primarycolor);
+    margin-top: 10px;
+}
+
+.left-content p {
+    text-align: center;
+    display: -webkit-box;    
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.left-content1 p {
+    text-align: start;
+    display: -webkit-box;    
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.right-content p {
+    text-align: center;
+    display: -webkit-box;   
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.right-content2 img{
+    margin: 2vh;
+    border-radius: 5px;
+    width: clamp(200px, 40%, 700px);
+}
+
+
+        /* Mes Enseignements   */
+
+.left-content2 {      
+    margin-right: 50px;    
+    position: relative;
+}
+
+#tab {
+    width: 100%; /* Prend toute la largeur du conteneur */
+    margin: 2vh;
+    height: auto; /* Hauteur automatique pour conserver les proportions */  
+    border-radius: 5px;       
+}
+
+#tooltip-text {
+   padding: 0px;   
+   color:white;
+}
+
+
+       /* Parcours Universitaire */
+.parcU {
+    display: flex;
+    margin-bottom: 25px;
+    border: 1px solid black;    
+    border-radius: 15px;
+    background-color: rgba(18, 81, 29, 0.8);
+    padding: 10px;
+}
+
+.parcoursU_right {
+    display: flex;
+    text-align: start;
+    flex: 2;
+    align-items: center;
+}
+
+.parcoursU_left {
+     flex: 1;   
+}
+
+.parcoursU_left2 {        
+    flex: 1;   
+}
+
+.parcoursU_left2 img {
+    padding: 5px;
+    width: 45%;
+}
+
+.parcoursU_left img {
+    width: 14%;    
+    padding: 3px;
+}
+
+.ligne2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;    
+}
+
+.container8 {    
+    background-color: var(--secondarycolor);
+    padding: 10px;
+    text-align: center;    
+}
+
+.parcours_text {
+    padding-right: 50px;
+    margin: 0;
+    width: 100%;
+}
+
+#icone_me {
+    width: clamp(50px, 15%, 120px) ;
+}
+
+#iconeS {
+    width: clamp(60px, 25%, 150px);
+    
+}
+
+#iconeU {
+    width: clamp(70px, 25%, 150px);    
+}
+
+#iconeP {
+    width: clamp(70px, 35%, 150px); 
+    
+}
+
+#iconeM {
+    width: clamp(50px, 15%, 120px);
+    padding-top: 10px;
+}
+
+
+   /* CV & autres liens   */
+.link_button {
+    background-color: var(--primarycolor);
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 30px;
+    border: 2px solid var(--secondarycolor);;
+    padding: 10px 35px;
+    color: white;
+    cursor: pointer;
+}
+
+.link_button2 {
+    background-color: var(--primarycolor);
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 0;
+    border: 2px solid var(--secondarycolor);
+    padding: 10px 35px;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+                                        /*    PAGE CONTACT      */
+
+.formulaire-contact {
+    position: relative;
+    width: 100%;
+    height: 165vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('image/img5.jpg'); 
+    background-size: cover; /* l'image couvre tout le conteneur */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    overflow: hidden;
+    padding-top: 90px;
+}
+
+.form {
+    text-align: center;
+    color: white;
+    background: linear-gradient(to bottom, var(--tertarycolor), #007bff);
+    border-radius: 15px;
+    border: 2px solid black;
+    z-index: 1;    
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    margin: 1rem;                                   
+}
+
+.contact {
+    text-align: center;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 15x;
+    margin-bottom: 20px;
+}
+                                        
+                                        
+#case_contact {
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 1vw 2vw;
+    width: 25%;
+    padding: 5px;
+    font-family: "Lato", sans-serif;
+    font-size: clamp(8px, 1vw, 18px);
+}
+
+#case_contact2 {
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 1vw 2vw;
+    width: 60%;
+    padding: 5px;
+    font-family: "Lato", sans-serif;
+    font-size: clamp(8px, 1vw, 18px);
+}
+
+.contact_button{
+    background-color: var(--tertarycolor);
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: white;
+    border: 2px solid black;
+    padding: 1vw;
+    cursor: pointer;
+    width: 20%;
+    font-size: clamp(8px, 1vw, 18px);
+}
+
+.contact_button2 {
+    background-color: var(--tertarycolor);
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: white;
+    border: 2px solid black;
+    padding: 1vw;
+    cursor: pointer;
+    width: 60%;
+    font-size: clamp(8px, 1vw, 18px);
+}
+
+.form .button2 h3 {
+    padding-top: 10px;
+    margin: 10px auto;
+    border-top: 2px solid black;
+    width: 75%;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+    font-size: clamp(8px, 2vw, 18px);
+}
+
+.captcha {
+    display: flex;
+    justify-content: center;
+}
+
+.g-recaptcha {
+    border-radius: 5px;
+    transform: scale(0.9);
+    
+  }
+
+
+@media only screen and (max-width: 500px) {
+    .g-recaptcha {
+        transform:scale(0.77);
+        transform-origin:0 0;
+    }
+}
+
+
+                                    /*    PAGE DEVIS       */
+
+.formulaire_devis {      
+    position: relative;
+    width: 100%;
+    height: 165vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('image/img4.jpg'); 
+    background-size: cover; /* l'image couvre tout le conteneur */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    overflow: hidden;
+    padding-top: 90px;
+}
+
+.form2 {
+    text-align: center;
+    color: white;
+    background: linear-gradient(to bottom, var(--tertarycolor), #007bff);
+    border-radius: 15px;
+    border: 2px solid black;
+    z-index: 1;    
+    width: 50%;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    margin: 1rem;                                   
+}
+
+
+.cta_button5 {
+    background-color:var(--tertarycolor);;
+    border-radius: 30px;
+    margin: 2vw;
+    color: white;
+    border: 2px solid black;
+    padding: 10px 35px;
+    cursor: pointer;
+}
+
+.checkbox {
+    text-align:justify;
+    margin: 0 15vw;
+    font-size: clamp(8px, 2vw, 15px);
+
+}
+.form3 legend {
+    font-size: clamp(8px, 2vw, 19px);
+}
+.form-label {
+    font-size: clamp(8px, 2vw, 19px);
+}
+
+#liste {
+    font-size: clamp(8px, 2vw, 14px);
+}
+
