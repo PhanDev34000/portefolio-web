@@ -1,0 +1,49 @@
+/* Initialisation */
+*,::before, ::after {
+    margin:0; /* Centre horizontalement */
+    padding: 0;
+    box-sizing: border-box; /* Inclure les bordures et les rembourrages dans la largeur/hauteur */
+  }
+
+/*    Bandeau entier  */
+footer {    
+    display: flex; /* Utilisation de flexbox pour organiser les éléments horizontalement */    
+    align-items: center; /* Centre les éléments sur l'axe secondaire */    
+    padding: 8px; /* Ajoute un peu de marge intérieure  */
+    width: 100%;
+      
+    justify-content: center;
+}
+
+.footer_coord,
+.footer_logo,
+.footer_link {
+    flex: 1; /* Les parties occupent un espace équitable */
+    text-align: center;     
+}
+
+.footer_link h4 {
+    font-size: clamp(8px, 2vw, 18px); 
+         
+}
+
+.footer_coord h5 {
+    font-size: clamp(8px, 2vw, 18px); 
+}
+
+/*  Taille des logos   */
+#logo_footer {
+    width: 25vw; /* Utilisation de vw pour définir la largeur du logo */
+    max-width: 250px; /* Limite la largeur maximale du logo */
+    height: auto;    
+}
+
+.icone_insta img, .icone_FB img {
+    height: 3vw;
+    width: auto;
+}
+
+
+
+
+
