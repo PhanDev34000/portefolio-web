@@ -1,0 +1,182 @@
+footer {
+  z-index: 100;
+  background-color: #1F3A93;
+}
+
+form {
+  background-color: #1F3A93;
+}
+
+#bouton {
+  background-color: #93b4ff;
+}
+section {
+    padding-top: 2.5rem; 
+  }  
+
+  .contact:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+
+  input:focus, textarea:focus {
+    border: 3px solid black; /* Cadre noir */
+    outline: auto; 
+  }
+  
+  #bouton:hover {
+    border: 2px solid black;
+  }
+
+ #theme-toggle {
+  background-color: #93b4ff;
+ }
+
+/* Bouton Switch sous vidéo   */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-bottom: 2rem;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #1F3A93;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: white;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px white;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+
+
+
+/* Styles pour le DARK MODE*/
+
+
+.dark h1, .dark h2 {
+  color: white;
+}
+.dark h4, .dark h5, .dark a {
+  color: black;
+}
+
+.dark header, .dark footer {
+  background: white;
+}
+
+.dark #theme-toggle {
+  background: rgb(63, 62, 62);
+}
+
+.dark form {
+  background-color: white;
+}
+
+.dark input, .dark textarea {
+  background-color: lightgray;
+}
+
+.dark #bouton {
+  background: lightgray;
+  color: black;
+}
+
+.dark #titre {
+  color: black;
+}
+
+/*.dark #encadre {
+  border: 3px solid rgb(91, 90, 90);
+} */
+#cadreV {
+  border: 3px solid #1F3A93;
+}
+
+#cadreF {
+  border: 3px solid white;
+}
+
+#cadre, #cadre2, #cadre3, #cadre4, #cadre5, #cadre6, #cadre7, #cadre8, #cadre9, #cadre10, #cadre11 {
+  border: 3px solid #1F3A93;
+  border-radius: 10px;
+}
+
+.dark #cadre, .dark #cadre2, .dark #cadre3, .dark #cadre4, .dark #cadre5, .dark #cadre6, .dark #cadre7, .dark #cadre8, .dark #cadre9, .dark #cadre10, .dark #cadre11, .dark #cadreV, .dark #cadreF {
+  border: 3px solid rgb(148, 147, 147);
+}
+
+.dark .slider:before {
+  background-color: black;
+}
+
+
+@media screen and (max-width: 780px) {
+  #parcours {
+    padding: 0 15px; /* Ajoute un peu de padding autour du contenu */
+  }
+
+  /* Assurez-vous que la largeur maximale du cadre s'ajuste bien à l'écran */
+  #cadre3 {
+    padding: 12px;
+    max-width: 100%; /* Rend le cadre 100% de la largeur du parent */
+  }
+
+  /* Faire en sorte que les éléments se placent les uns sous les autres */
+  #cadre3 .flex {
+    flex-direction: column; /* Empile les éléments en colonne sur petit écran */
+    gap: 20px; /* Ajoute un espace vertical entre chaque élément */
+  }
+
+  /* Redimensionner les images pour éviter qu'elles ne soient trop grandes */
+  #cadre3 img {
+    width: 50px;
+    height: auto; /* Laisser l'image s'adapter proportionnellement */
+  }
+
+  /* Centrer les titres sur petit écran */
+  #cadre3 h4, #cadre3 h5 {
+    text-align: center;
+  }
+}
