@@ -7,7 +7,8 @@
     <link href="nav.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <link href="output.css" rel="stylesheet">
-    
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <title>Portefolio SV</title>
    <!-- Police -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,9 +103,9 @@
       </script>
     </section>
 
-      <div class="flex justify-center space-x-6">
+      <div class="flex flex-cadre justify-center space-x-4">
 <!-- Partie Contact -->
-    <div id="cadre" class="max-w-xs flex flex-col items-center gap-6 p-6 bg-white rounded-lg" style="transition: transform 0.3s ease, box-shadow 0.3s ease; transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" 
+    <div id="cadre" class="flex flex-col items-center p-6 bg-white" style="transition: transform 0.3s ease, box-shadow 0.3s ease; transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" 
         onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 12px rgba(0, 0, 0, 0.5)';"
         onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0)';">
           <div class="text-center">
@@ -115,7 +116,7 @@
                   <div class="flex flex-col items-center gap-4 mt-4">
                       <div class="flex items-center gap-2">
                           <img src="images/mail.png" alt="icone d'un email" class="w-6 h-6">
-                          <h4 class="text-black">vernierestphane@gmail.com</h4>
+                          <h4 class="text-black">vernierestephane@gmail.com</h4>
                       </div>
                       <div class="flex items-center gap-2">
                           <img src="images/phone.png" alt="icone d'un téléphone" class="w-6 h-6">
@@ -127,7 +128,7 @@
         </div>
     
 <!-- Partie Liens -->
-        <div id="cadre2" class="max-w-xs flex flex-col items-center gap-6 p-6 bg-white rounded-lg" style="transition: transform 0.3s ease, box-shadow 0.3s ease; transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
+        <div id="cadre2" class="max-w-xs flex flex-col items-center gap-6 p-6 bg-white" style="transition: transform 0.3s ease, box-shadow 0.3s ease; transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
           onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 12px rgba(0, 0, 0, 0.5)';"
           onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0)';">
             <h2 class="font-sans text-black text-2xl mb-4" id="titre">Liens :</h2>
@@ -160,24 +161,25 @@
         <div class="max-w-4xl w-full p-6 bg-white rounded-lg" id="cadre3">
           <div class="text-center">
             <h2 class="font-sans text-black text-2xl mb-4" id="titre">Mon parcours :</h2>
+             <!-- Conteneur pour les catégories -->
             <div class="flex justify-center gap-6">
               <!-- Premier élément -->
               <div class="flex flex-col items-center">
                 <img src="images/diplome.png" alt="Diplôme" class="w-12 h-12 mb-2">
                 <h4 class="text-black">Master de Biologie</h4>
-                <h5 class="text-customprimary">2002</h5>
+                <h5 class="text-customprimary" style="margin-bottom: 3rem;">2002</h5>
               </div>
               <!-- Deuxième élément -->
               <div class="flex flex-col items-center">
                 <img src="images/photographe.png" alt="Photographe" class="w-8 h-12 mb-2">
                 <h4 class="text-black">Photographe</h4>
-                <h5 class="text-customprimary">2004-2022</h5>
+                <h5 class="text-customprimary" style="margin-bottom: 3rem;">2004-2022</h5>
               </div>
               <!-- Troisième élément -->
               <div class="flex flex-col items-center">
                 <img src="images/ADRAR.png" alt="Formation Développeur Web" class="w-18 h-14">
                 <h4 class="text-black">Formation Développeur Web</h4>
-                <h5 class="text-customprimary">Oct 2023 - Juillet 2024</h5>
+                <h5 class="text-customprimary" style="margin-bottom: 3rem;">Oct 2023 - Juillet 2024</h5>
               </div>
               <!-- Quatrième élément -->
               <div class="flex flex-col items-center">
@@ -199,7 +201,7 @@
         <div class="flex justify-center gap-6 max-w-7xl mx-auto pt-8">
           
           <!-- Projet n°1 -->
-          <div id="cadre4" class="bg-white rounded-lg p-4 flex flex-col items-center w-full md:w-[calc(50%-1rem)]" style="transition: transform 0.3s ease, box-shadow 0.3s ease; transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
+          <div id="cadre4" class="bg-white p-4 flex flex-col items-center w-full md:w-[calc(50%-1rem)]" style="transition: transform 0.3s ease, box-shadow 0.3s ease; transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
           onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 12px rgba(0, 0, 0, 0.5)';"
           onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0)';">
             <h2 class="font-sans text-black text-2xl mb-4" id="titre">Projet n°1</h2>
@@ -320,40 +322,46 @@
         
         <!-- Conteneur flex pour aligner les h3 sur une même ligne -->
         <div class="flex justify-center gap-6 mt-8">
-          <!-- Cadre blanc pour chaque élément -->
-          <div id="cadre9" class="p-4 bg-white" style="transition: transform 0.3s ease, box-shadow 0.3s ease; transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
+          <!-- Cadre blanc pour chaque élément -->  
+          <div id="cadre9" class="p-4 bg-white flex flex-col justify-center items-center" style="transition: transform 0.3s ease, box-shadow 0.3s ease; transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
           onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 12px rgba(0, 0, 0, 0.5)';"
           onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0)';">
-            <h3 class="text-center text-lg font-semibold">Créativité</h3>
-          </div>
+            <h3 class="text-center text-lg font-sans">Créativité</h3>
+          </div>          
+          
           <div id="cadre10" class="p-4 bg-white" style="transition: transform 0.3s ease, box-shadow 0.3s ease; transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
           onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 12px rgba(0, 0, 0, 0.5)';"
           onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0)';">
-            <h3 class="text-center text-lg font-semibold">Esprit d'équipe</h3>
+            <h3 class="text-center text-lg font-sans">Esprit d'équipe</h3>
           </div>
           <div id="cadre11" class="p-4 bg-white" style="transition: transform 0.3s ease, box-shadow 0.3s ease; transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
           onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 12px rgba(0, 0, 0, 0.5)';"
           onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0)';">
-            <h3 class="text-center text-lg font-semibold">Capacité d'adaptation</h3>
+            <h3 class="text-center text-lg font-sans">Capacité d'adaptation</h3>
           </div>
         </div>
       </div>
       
 <!--    Contact   -->
+
     <section id="contact">  
       <div class="p-8">
         <h1 class="font-sans text-3xl">Contactez-moi !</h1>
-        <form action="envoi_contact.php" method="POST" style="max-width: 36rem; border-radius:10px;" class="p-8 mt-8 mx-auto" id="cadreF">
+        <form action="envoi_contact.php" method="POST" style="max-width: 40rem; border-radius:10px;" class="p-8 mt-8 mx-auto" id="cadreF">
             <div class="flex flex-col gap-6">
             <div class="flex gap-4">
-              <input type="text" name="prenom" placeholder="Votre prénom" class="p-2 w-full sm:w-1/2" style="border-radius: 5px;">
-              <input type="text" name="nom" placeholder="Votre nom" class="p-2 w-full sm:w-1/2 rounded-lg" style="border-radius: 5px;">
+              <input type="text" name="prenom" placeholder="Prénom" class="p-2 w-full sm:w-1/2" style="border-radius: 5px;">
+              <input type="text" name="nom" placeholder="Nom" class="p-2 w-full sm:w-1/2 rounded-lg" style="border-radius: 5px;">
             </div>
-            <input type="email" name="email" placeholder="Votre email" class="p-2 w-full rounded-lg" style="border-radius: 5px;">
+            <input type="email" name="email" placeholder="Email" class="p-2 w-full rounded-lg" style="border-radius: 5px;">
             <textarea name="message" placeholder="Tapez votre message" cols="70" rows="10" class="p-2 w-full rounded-lg" style="border-radius: 5px;"></textarea>
+            <div class="g-recaptcha" data-sitekey="6LfrM0AqAAAAAN0xKfH_b2da-73yWlsknoLUXf4W" style="margin:0 auto;"></div></br>
+
             <input type="submit" name="submit" value="Envoyer" class="py-2 px-4 cursor-pointer text-sm mx-auto" style="border-radius: 10px; transform: scale(1); transition: transform 0.3s ease"  onmouseover="this.style.transform='scale(1.1)';" onmouseout="this.style.transform='scale(1)';" id="bouton">
-          </div>
-        </form>        
+            </div>
+        </form> 
+       
+               
       </div>          
     </section>
     </main>

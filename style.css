@@ -9,6 +9,7 @@ form {
 
 #bouton {
   background-color: #93b4ff;
+  margin-top: -3rem;
 }
 section {
     padding-top: 2.5rem; 
@@ -127,9 +128,13 @@ section {
   color: black;
 }
 
-/*.dark #encadre {
-  border: 3px solid rgb(91, 90, 90);
-} */
+.dark .navigation li {
+  width: 100%;
+  height: 50px;
+  background: lightgray;
+}
+
+
 #cadreV {
   border: 3px solid #1F3A93;
 }
@@ -151,7 +156,7 @@ section {
   background-color: black;
 }
 
-
+/*  Media Screen   */
 @media screen and (max-width: 780px) {
   #parcours {
     padding: 0 15px; /* Ajoute un peu de padding autour du contenu */
@@ -175,8 +180,81 @@ section {
     height: auto; /* Laisser l'image s'adapter proportionnellement */
   }
 
+  #cadre3 img[alt="Formation Développeur Web"] {
+    width: 100px; /* Ajuster la largeur à 100px */
+    height: auto; /* Garder la proportion */
+  }
+  #cadre3 img[alt="Développeur Web Jr"] {
+    width: 100px; /* Ajuster la largeur à 100px */
+    height: auto; /* Garder la proportion */
+  }
+
   /* Centrer les titres sur petit écran */
   #cadre3 h4, #cadre3 h5 {
     text-align: center;
   }
+
+    /* Cibler spécifiquement le conteneur parent des deux cadres */
+    .flex-cadre {
+      flex-direction: column; /* Aligner les éléments verticalement */
+      
+    }
+  
+    #cadre {
+      margin: 1rem auto;
+      max-width: 78%;    
+    }
+
+    #cadre img {
+      width: 30px;
+      height: auto;
+    }
+  
+    #cadre2 {     
+      margin: 0 auto; /* Centrer les cadres horizontalement */      
+      width: 100%; /* Assurer que les cadres occupent toute la largeur disponible */
+    }  
+
+    /* Réglage des images à l'intérieur des cadres */
+  #cadre2 img {
+    width: 30px; /* Ajuste la taille des images si nécessaire */
+    height: auto; /* Maintient les proportions des images */
+  }
+
+    /* Assure que le texte est centré dans les cadres */
+  #cadre h2, #cadre h3, #cadre h4, #cadre2 h2, #cadre2 h4 {
+    text-align: center; /* Centre le texte */
+  }
+
+   /* Conteneur de la grille des projets */
+   #portefolio .flex {
+    flex-wrap: wrap; /* Permet aux projets de passer à la ligne */
+    justify-content: center; /* Centre les projets sur petit écran */
+  }
+
+  /* Ajuste la largeur des projets pour avoir 2 par ligne */
+  #portefolio #cadre4,
+  #portefolio #cadre5,
+  #portefolio #cadre6,
+  #portefolio #cadre7 {
+    width: calc(50% - 1rem); /* 50% de la largeur avec un petit espace entre les projets */
+    margin-bottom: 20px; /* Ajoute un espace entre les lignes de projets */
+  }
+
+  /* Optionnel : réduire la taille des images pour s'adapter à la nouvelle disposition */
+  #portefolio img {
+    max-width: 100%; /* S'assure que les images ne dépassent pas leur conteneur */
+    height: auto; /* Garde les proportions de l'image */
+  }
+
+  footer h5, footer h4 {
+    font-size: 0.75rem; /* Taille plus petite pour les petits écrans */
+  }
+
+#cadreF {
+  padding: 6px;
 }
+
+
+}
+

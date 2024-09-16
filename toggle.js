@@ -7,13 +7,13 @@ const mainElement = document.querySelector('main'); // get the main element
    // Vérifie le thème actuel
 if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
   document.documentElement.classList.add('dark');
-  mainElement.style.backgroundImage = "url('/images/codeAP_dark.png')"; // change the background image
+  mainElement.style.backgroundImage = "url('https://www.verniere-dev.com/images/CodeDark.png')"; // change the background image
   mainElement.classList.add('dark'); // add the dark class to the main element
   darkIcon.classList.remove('hidden');
   lightIcon.classList.add('hidden');
 } else {
   document.documentElement.classList.remove('dark');
-  mainElement.style.backgroundImage = "url('/images/CodeAP.png')"; // change the background image
+  mainElement.style.backgroundImage = "url('images/CodeAP.png')"; // change the background image
   mainElement.classList.remove('dark'); // remove the dark class from the main element
   darkIcon.classList.add('hidden');
   lightIcon.classList.remove('hidden');
@@ -22,11 +22,11 @@ if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && w
 themeToggleBtn.addEventListener('click', () => {
   document.documentElement.classList.toggle('dark');
   if (document.documentElement.classList.contains('dark')) {
-    mainElement.style.backgroundImage = "url('/images/codeAP_dark.png')"; // change the background image
+    mainElement.style.backgroundImage = "url('https://www.verniere-dev.com/images/CodeDark.png')"; // change the background image
     mainElement.classList.add('dark'); // add the dark class to the main element
     localStorage.setItem('theme', 'dark');
   } else {
-    mainElement.style.backgroundImage = "url('/images/CodeAP.png')"; // change the background image
+    mainElement.style.backgroundImage = "url('images/CodeAP.png')"; // change the background image
     mainElement.classList.remove('dark'); // remove the dark class from the main element
     localStorage.setItem('theme', 'light');
   }

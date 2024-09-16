@@ -18,8 +18,8 @@ if(isset($_POST['submit'])){
         $email = $_POST['email'];
         $message = $_POST['message'];
         
-        // Clé secrète reCAPTCHA
-        $recaptchaSecret = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+       // Clé secrète reCAPTCHA
+        $recaptchaSecret = '6LfrM0AqAAAAAD6JDsK8o_oIVZaNBdwgLipU6jV4';
         $recaptchaResponse = $_POST['g-recaptcha-response'];
 
         // Vérification reCAPTCHA
@@ -29,15 +29,18 @@ if(isset($_POST['submit'])){
         if(intval($responseKeys["success"]) !== 1) {
             echo '<p>reCAPTCHA validation failed. Please try again.</p>';
         } else {
-            $mail = new PHPMailer(true);
+            $mail = new PHPMailer(true);   
+
+             // Instancier PHPMailer
+        $mail = new PHPMailer(true); // Important
 
             try {
                 // Paramètres du serveur
                 $mail->isSMTP();
-                $mail->Host       = 'smtp.hostinger.com'; // Remplacez par le serveur SMTP de votre fournisseur
+                $mail->Host       = 'smtp.gmail.com'; // Remplacez par le serveur SMTP de votre fournisseur
                 $mail->SMTPAuth   = true;
                 $mail->Username   = 'vernierestephane@gmail.com'; // Remplacez par votre adresse email
-                $mail->Password   = 'XXXXXXXXXX'; // Remplacez par le mot de passe de votre adresse email
+                $mail->Password   = 'awxaoxqatkappepe'; // Remplacez par le mot de passe de votre adresse email
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
                 $mail->Port       = 465;
 
