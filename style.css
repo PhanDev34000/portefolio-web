@@ -90,7 +90,18 @@ section {
     border-radius: 50%;
   }
 
-
+  #cadreV {
+    border: 3px solid #1F3A93;
+  }
+  
+  #cadreF {
+    border: 3px solid white;
+  }
+  
+  #cadre, #cadre2, #cadre3, #cadre4, #cadre5, #cadre6, #cadre7, #cadre8, #cadre9, #cadre10, #cadre11 {
+    border: 3px solid #1F3A93;
+    border-radius: 10px;
+  }
 
 
 /* Styles pour le DARK MODE*/
@@ -129,23 +140,10 @@ section {
 }
 
 .dark .navigation li {
-  width: 100%;
-  height: 50px;
-  background: lightgray;
-}
-
-
-#cadreV {
-  border: 3px solid #1F3A93;
-}
-
-#cadreF {
-  border: 3px solid white;
-}
-
-#cadre, #cadre2, #cadre3, #cadre4, #cadre5, #cadre6, #cadre7, #cadre8, #cadre9, #cadre10, #cadre11 {
-  border: 3px solid #1F3A93;
-  border-radius: 10px;
+  margin: 0 1rem;
+  height: 100%;
+  text-align: center;
+  line-height: 4rem;
 }
 
 .dark #cadre, .dark #cadre2, .dark #cadre3, .dark #cadre4, .dark #cadre5, .dark #cadre6, .dark #cadre7, .dark #cadre8, .dark #cadre9, .dark #cadre10, .dark #cadre11, .dark #cadreV, .dark #cadreF {
@@ -154,6 +152,10 @@ section {
 
 .dark .slider:before {
   background-color: black;
+}
+
+.dark .lignes {
+  background: black;
 }
 
 /*  Media Screen   */

@@ -5,9 +5,12 @@ ini_set('display_errors', 1);
 require 'PHPMailer/src/Exception.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
+require 'vendor/autoload.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
 if(isset($_POST['submit'])){
     if(empty($_POST['nom']) || empty($_POST['prenom']) || empty($_POST['email']) || empty($_POST['message'])) {
@@ -19,7 +22,7 @@ if(isset($_POST['submit'])){
         $message = $_POST['message'];
         
        // Clé secrète reCAPTCHA
-        $recaptchaSecret = '6LfrM0AqAAAAAD6JDsK8o_oIVZaNBdwgLipU6jV4';
+        $recaptchaSecret = $_ENV['RECAPTCHA_SECRET'];
         $recaptchaResponse = $_POST['g-recaptcha-response'];
 
         // Vérification reCAPTCHA
@@ -39,8 +42,8 @@ if(isset($_POST['submit'])){
                 $mail->isSMTP();
                 $mail->Host       = 'smtp.gmail.com'; // Remplacez par le serveur SMTP de votre fournisseur
                 $mail->SMTPAuth   = true;
-                $mail->Username   = 'vernierestephane@gmail.com'; // Remplacez par votre adresse email
-                $mail->Password   = 'awxaoxqatkappepe'; // Remplacez par le mot de passe de votre adresse email
+                $mail->Username   = $_ENV['SMTP_USERNAME']; // Remplacez par votre adresse email
+                $mail->Password   = $_ENV['SMTP_PASSWORD']; // Remplacez par le mot de passe de votre adresse email
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
                 $mail->Port       = 465;
 
