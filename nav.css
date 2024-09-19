@@ -32,6 +32,13 @@ height: 60px;
   line-height: 4rem;
 }
 
+.navigation li:nth-child(1){
+  margin-left: 2rem;}
+
+.dark .navigation li:nth-child(1){
+  margin-left: 2rem;}
+
+
 .navigation a {
   text-decoration: none;
   color: #f1f1f1;
