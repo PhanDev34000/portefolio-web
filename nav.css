@@ -115,7 +115,7 @@ height: 60px;
     display: none;
   }
   .navigation {
-    top: -250px;
+    top: -300px;
     flex-direction: column;
     justify-content: flex-start;
   }

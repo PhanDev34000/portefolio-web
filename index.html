@@ -54,18 +54,37 @@
             id="animated-icon"
             src="https://cdn.lordicon.com/vlycxjwx.json"
             trigger="in"
-            delay="1500"
+            delay="2500"
             stroke="light"
             state="in-reveal"
             colors="primary:#1f3a93,secondary:#1f3a93"
             style="width:75px;height:75px">
         </lord-icon>
       </div>
+      
+        
       <!--  Vidéo -->
       <div class="flex justify-center">
         <video width="150" height="150" src="visuels/perso.mp4" loop autoplay muted frameborder="0" class="rounded-full overflow-hidden" style="margin-bottom: 2rem;" id="cadreV"></video>
       </div>
-      <div id="tooltip" style="display:none; position:absolute; background-color:#1F3A93; color:#fff; padding:5px; border-radius:5px;">Référence à un film ! Vous l'avez ?</br>Switcher le bouton pour voir l'original !</div>
+      <!-- Messages  -->
+      <div id="message-container" class="text-black text-lg mb-4"></div>
+      <script>
+        const messages = ["Référence à un film !", "Vous l'avez ?", "Switcher le bouton pour voir l'original !"];
+        let currentIndex = 0;
+        const messageContainer = document.getElementById("message-container");
+        
+        function displayNextMessage() {
+            messageContainer.textContent = messages[currentIndex];
+            currentIndex = (currentIndex + 1) % messages.length;
+        }
+        
+        // Affiche le premier message dès le chargement de la page
+        displayNextMessage();
+        
+        // Change le message toutes les 3 secondes (2000 ms)
+        setInterval(displayNextMessage, 2000);
+        </script>
       
       <label class="switch">
           <input type="checkbox" id="toggleButton">

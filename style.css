@@ -158,6 +158,14 @@ section {
   background: black;
 }
 
+.dark #message-container {
+  color:white;
+}
+
+.dark .navigation li {
+  background: lightgray;
+}
+
 /*  Media Screen   */
 @media screen and (max-width: 780px) {
   #parcours {
