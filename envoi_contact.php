@@ -13,11 +13,12 @@ $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
 if(isset($_POST['submit'])){
-    if(empty($_POST['nom']) || empty($_POST['prenom']) || empty($_POST['email']) || empty($_POST['message'])) {
+    if(empty($_POST['nom']) || empty($_POST['prenom']) || empty($_POST['societe'] || empty($_POST['email']) || empty($_POST['message']))) {
         echo "<p>Veuillez remplir les champs</p>";
     } else {
         $nom = $_POST['nom'];
         $prenom = $_POST['prenom'];
+        $societe = $_POST['societe'];
         $email = $_POST['email'];
         $message = $_POST['message'];
         
@@ -54,8 +55,8 @@ if(isset($_POST['submit'])){
                 // Contenu de l'email
                 $mail->isHTML(true);
                 $mail->Subject = 'Envoyé du site';
-                $mail->Body    = "Prenom : " . $prenom . "<br>Nom : " . $nom . "<br>Email : " . $email . "<br>Message : " . nl2br($message);
-                $mail->AltBody = "Prenom : " . $prenom . "\nNom : " . $nom . "\nEmail : " . $email . "\nMessage : " . $message;
+                $mail->Body    = "Prenom : " . $prenom . "<br>Nom : " . $nom . "<br>Société : $societe <br>Email : " . $email . "<br>Message : " . nl2br($message);
+                $mail->AltBody = "Prenom : " . $prenom . "\nNom : " . $nom ."\nSociété :" . $societe. "\nEmail : " . $email . "\nMessage : " . $message;
 
                 $mail->send();
                 echo "<p class='success'>Votre message a bien été envoyé</p>";
