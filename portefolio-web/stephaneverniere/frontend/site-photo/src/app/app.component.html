@@ -1,0 +1,11 @@
+@if (showHeader()) {
+  <app-header></app-header>
+}
+
+<main class="container">
+  <router-outlet></router-outlet>
+</main>
+
+@if (showHeader()) {
+  <app-footer></app-footer>
+}

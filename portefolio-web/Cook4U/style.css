@@ -1,0 +1,587 @@
+/* Initialisation */
+*,::before, ::after {
+    margin:0; /* Centre horizontalement */
+    padding: 0;
+    box-sizing: border-box; /* Inclure les bordures et les rembourrages dans la largeur/hauteur */
+  }
+
+
+/*     Paramétrage Titres & Textes     */
+h1, h2, h3, h4, h5 {
+    
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    
+    font-size: clamp(25px, 2vw, 35px);
+}
+
+h2 {
+   
+    font-size: clamp(15px, 2vw, 25px);
+    
+   
+}
+
+h3 {
+    font-size: clamp(12px, 2vw, 21px); 
+}
+
+h5 {
+    font-size: clamp(8px, 1vw, 15px); 
+}
+
+p {
+    width: 75%;
+    font-size: clamp(10px, 2vw, 18px); 
+    margin: 10px auto;
+}
+
+/*      Parmétrage des couleurs      */
+
+:root {
+    --primarycolor: #5A3A22; /* Couleur principale */
+    --secondarycolor: #E0CDA9; /* Couleur secondaire */
+    --tertarycolor: #FDFD96;  /* Couleur tertiaire */
+}
+
+/*      Page d'Accueil          */
+
+.bandeau-presentation  {
+    background-color: var(--secondarycolor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.picto {
+    background-color: var(--secondarycolor);
+    text-align: center;
+    padding-top: 5vh;
+}
+
+.picto h1 {
+    padding-top: 40px;
+}
+
+.icone_picto img {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    width:clamp(1.5vw, 5vw, 6vw);   
+    margin-right: 5px;
+}
+
+.right-content img {
+    width: 25vw;
+    margin: 20px 25px;
+    border-radius: 5px;    
+}
+
+.plat_du_jour {
+    border: 2px solid black;
+    background-color: rgba(0, 0, 0, 0.3); /* Ajoute un fond semi-transparent pour améliorer la lisibilité */   
+    margin-bottom: 10vh; 
+    padding-bottom: 10px;
+}
+
+.plat_du_jour h2 {
+    text-align: center;   
+    padding-top: 15px;
+    color: white;
+}
+
+.faq {
+    background-color: var(--secondarycolor);
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+}
+
+.item .titre_plat {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+
+/*      Page LA CUISINE          */
+
+
+.cuisine {
+    position: relative;
+    padding: 10px 0; /* Ajouter un padding pour que le contenu ne touche pas les bords */
+    height: 300vh; /* Ajustez la hauteur de la section selon vos besoins */
+    overflow: hidden; /* Assure que le contenu ne dépasse pas la section */
+}
+
+.cuisine .bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Assure que l'image couvre l'élément sans déformation */
+    z-index: -1; /* Place l'image derrière le contenu */
+    background-repeat: no-repeat; /* Évite que l'image ne se répète */
+    background-size: cover; /* Assure que l'image couvre toute la zone */
+}
+
+.cuisine h1 {
+    color: white;
+    font-weight: 600;
+    z-index: 100;
+    text-align: center;
+    margin: 0;
+    padding: 30px 0; /* Espace en haut et en bas du titre */
+    position: relative; /* Position relative pour maintenir l'ordre de superposition */
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+/*    Contact */
+
+.formulaire-contact {
+    background-color: var(--secondarycolor);
+    padding: 2rem;
+    border-bottom: 1px solid black;
+}
+
+.form {    
+    width: 60%;
+    text-align: center; 
+    color: white; 
+    background-color: var(--tertarycolor); 
+    background: linear-gradient(to bottom, var(--primarycolor), var(--secondarycolor));
+    border-radius: 15px;    
+    margin: 0 auto;
+    border: 2px solid black;
+    z-index: 1;
+}
+
+.contact {    
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5); 
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+#case_contact {
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 1vw 2vw;
+    width: 30%;
+    padding: 5px;
+    
+    font-size: clamp(8px, 1vw, 18px);
+}
+
+#case_contact2 {
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 1vw 2vw;
+    width: 75%;
+    padding: 5px;
+    
+    font-size: clamp(8px, 1vw, 18px);
+}
+
+.form_envoi .contact_button {
+    background-color: var(--primarycolor);
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;    
+    color: white;
+    border: 2px solid black;
+    padding: 1vw;
+    cursor: pointer;
+    width: 20%;
+    font-size: clamp(8px, 1vw, 18px);
+}
+
+#mail, #motdepasse {
+    font-size: clamp(5px, 4rem, 15px);
+}
+
+
+/*     PAge Connexion espace   */
+
+.espace {
+    text-align: center;
+    background-color: var(--secondarycolor);
+    border-bottom: 1px solid black;    
+}
+
+.espace h1 {
+    padding-top: 10px;
+}
+
+.espace_button {
+    background-color: var(--secondarycolor);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.conn_client,
+.conn_cuisine {
+    text-align: center;
+    background-color: var(--primarycolor);
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 50%;
+    margin: 10px auto;
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+
+.image_connexion img {
+    border-radius: 10px;
+    height: 35vh;
+}
+
+
+/*    Page Menu Cuisine   */
+
+.esp_cuisine {
+    background-color: var(--secondarycolor);
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.esp_cuisine h1 {
+    padding-top: 10px;
+}
+
+.menu_cuisine {
+    background-color: var(--primarycolor);
+    width: 40%;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+}
+
+.menu_button1 {
+    background-color: var(--secondarycolor);
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/*    Page Menu Client   */
+
+.esp_client {
+    background-color: var(--primarycolor);
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.esp_client h1 {
+    padding-top: 10px;
+    color: white;
+}
+
+.menu_client {
+    background-color: var(--secondarycolor);
+    width: 40%;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+}
+
+.menu_button {
+    background-color: var(--primarycolor);
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+
+/*   FAQ    */
+
+.accordion-button::after {
+    content: ''; /* Unicode for down arrow */
+    margin-left: auto;
+    transition: transform 0.2s;
+}
+.accordion-button:not(.collapsed)::after {
+    content: '';
+    transform: rotate(180deg);
+    
+}
+.accordion-button {
+    display: flex;
+    align-items: center;
+   border-radius: 20px;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+.container_faq h1 {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.container_faq h3 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.container_faq {
+    width: 100%;
+    height: auto;
+    max-width: 100%; /* S'assurer que le conteneur ne dépasse pas 100% */
+    padding: 0; /* Supprimer tout padding du conteneur */
+    background-color: var(--secondarycolor);
+    text-align: center; /* Centrer le texte */
+}
+
+.accordion-item {
+    margin: 10px auto;
+    width: clamp(100px, 60vw, 750px); 
+    
+}
+
+#img3 {
+    width: 25vw;
+    border-radius: 10px;
+    margin-bottom: 2vh;
+}
+
+/*  Fiche Produit   */
+
+.fiche_produit {
+    background-color: var(--primarycolor);
+    text-align: center;
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_produit {
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 60%;
+    background-color: var(--secondarycolor);
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.fiche_produit h1 {
+    padding-top: 20px;
+    color: white;
+}
+
+#nom_plat {
+    width: 50%;
+    margin-top: 10px;
+}
+
+#img_plat, #prix_plat {
+    margin-bottom: 10px;
+}
+
+.FP_button {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.fp_button {
+    background-color: var(--primarycolor);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+}
+
+.checkbox {
+    margin-bottom: 20px;
+}
+
+#checkbox {
+    margin-bottom: 15px;
+    
+}
+
+
+/* Ecran de CONNEXION + Inscription   */
+
+.ecranconnexion, .ecran_inscription {
+    background-color: var(--secondarycolor);
+    height: 85vh;
+    text-align: center;
+    padding: 2em; /* Ajoute du padding pour mieux espacer le contenu du bord */
+
+}
+
+.form_connexion {
+    background-color: var(--primarycolor);
+    gap: 1em; /* Espace entre les éléments */
+    border: 1px solid black;
+    width: 50%;
+    border-radius: 10px;
+    margin: 4vh auto;
+   padding-top: 3vh;
+   padding-bottom: 3vh;
+}
+
+.form_inscription {
+    background-color: var(--primarycolor);
+    gap: 1em; /* Espace entre les éléments */
+    border: 1px solid black;
+    width: 30%;
+    border-radius: 10px;
+    margin: 4vh auto;
+   padding-top: 3vh;
+   padding-bottom: 3vh;
+}
+
+.cta_button {
+    margin-top: 1em; /* Ajoute de l'espace au-dessus du bouton */
+    padding: 0.5em 1em; /* Ajoute du padding à l'intérieur du bouton */
+    background-color: var(--secondarycolor);
+    border: 1px solid black;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.cta_button:hover {
+    background-color: var(--primarycolor)
+}
+
+.cta_button1 {
+    margin-top: 1em; 
+    padding: 0.5em 1em; 
+    background-color: var(--primarycolor);
+    border: 1px solid black;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.cta_button1:hover {
+    background-color: var(--secondarycolor)
+}
+
+form input[type="submit"] {
+    width: auto; /* Pour que le bouton ne prenne pas toute la largeur */
+    padding: 0.5em 1em;
+    background-color: var(--secondarycolor);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.image_connexion {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#rond {
+    width: 10vw;
+    height: auto;
+}
+
+#rond1 {
+    width: 11.5vw;
+    height: auto;
+}
+
+.form_connexion h1, .form_inscription h1 {
+    color: white;
+    margin-bottom: 2vh;
+}
+
+#intitulé {
+    color: white;
+}
+
+#intitulé1 {
+    color: white;    
+}
+
+#ecrit_form {
+    text-align: center;    
+    margin-bottom: 5vh;    
+}
+
+#ecrit_form input {
+       width: 60%;
+}
+
+
+
+/*  INFORMATIONS PERSONNELLES   */
+
+#case_perso, #case_presentation {
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 1vw 2vw;
+    width: 30%;
+    padding: 5px;    
+    font-size: clamp(8px, 1vw, 18px);
+}
+
+#case_perso2 {
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 1vw 2vw;   
+    padding: 5px;    
+    font-size: clamp(8px, 1vw, 18px);
+}
+
+
+/*    PRESENTATION CUISINIER   */
+
+.titre_présentation {
+    text-align: center;
+    color: white;
+    margin: 1vw;    
+}
+
+/* Fiche Produit CLIENT   */
+
+.fiche_produit_client {
+    background-color: var(--secondarycolor);
+    text-align: center;
+    color: white;
+    padding: 5vh;
+}
+
+.fiche_produit_client img {
+    width: 25vw;
+}
+
+.carte_produit {
+    background-color: var(--primarycolor);
+    width: 50%;
+    margin: 10px auto;
+    padding: 2vh;
+    border-radius: 15px;
+}
