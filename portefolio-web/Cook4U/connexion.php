@@ -40,7 +40,7 @@ if (isUserLoggedIn()) {
             $bdd = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
             $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch(PDOException $e) {
-            echo "Erreur : " . $e->getMessage();
+            echo "Base de données non fournie (projet pédagogique)" 
         }
 
         $error_msg = "";
